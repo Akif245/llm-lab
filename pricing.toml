@@ -1,0 +1,9 @@
+# Fill these in YOURSELF from each provider's pricing page.
+# USD per 1,000,000 tokens. Leave cached_input blank if unsupported.
+#
+# Do not copy from a blog post. Prices change. Go to the source.
+
+# [models."example-model-name"]
+# input = 0.0
+# output = 0.0
+# cached_input = 0.0

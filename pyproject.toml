@@ -1,0 +1,32 @@
+[project]
+name = "llm-lab"
+version = "0.1.0"
+description = "Week 1: LLM primitives, measured by hand."
+requires-python = ">=3.11"
+dependencies = [
+    "python-dotenv>=1.0",
+    # TODO: add your provider SDKs as you go -- `uv add anthropic` etc.
+    # Deliberately empty. Add dependencies only when you actually need them.
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "ruff>=0.6"]
+
+[project.scripts]
+llm-lab = "llm_lab.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llm_lab"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
