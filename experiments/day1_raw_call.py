@@ -13,7 +13,7 @@ url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generate
 payload = {
     "system_instruction": {"parts": [{"text": "You are terse."}]},
     "contents": [
-        {"role": "system", "parts": [{"text": "You are terse."}]},
+        {"role": "user", "parts": [{"text": "You are terse."}]},
 
         {"role": "user", "parts": [{"text": "Explain what a token is in two sentences."}]}
     ],
